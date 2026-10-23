@@ -25,6 +25,8 @@ bin/
 
 ### VS Code ###
 .vscode/
+.idea
+.qodo
 
 ### Mac OS ###
 .DS_Store
