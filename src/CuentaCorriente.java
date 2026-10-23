@@ -19,11 +19,12 @@ public class CuentaCorriente extends CuentaBancaria {
     public void retirar(double monto) {
         double saldo =getSaldo();
         if (monto <= (limiteSobregiro + saldo)) {
-            saldo = saldo - monto;
+            descontarSaldo(monto);
 
             if (saldo < 0) {
-
-                double comision = (saldo*-1) * (porcentajeComisionSobregiro);
+                saldo = saldo - monto;
+                double saldop =Math.abs(saldo);
+                double comision = (saldop) * (porcentajeComisionSobregiro/100);
                 saldo = saldo - comision;
 
                 System.out.println("Retiro Exitoso");
