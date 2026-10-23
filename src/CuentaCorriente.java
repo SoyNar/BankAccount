@@ -20,9 +20,10 @@ public class CuentaCorriente extends CuentaBancaria {
         double saldo =getSaldo();
         if (monto <= (limiteSobregiro + saldo)) {
             descontarSaldo(monto);
+            saldo = saldo - monto;
 
             if (saldo < 0) {
-                saldo = saldo - monto;
+
                 double saldop =Math.abs(saldo);
                 double comision = (saldop) * (porcentajeComisionSobregiro/100);
                 saldo = saldo - comision;
