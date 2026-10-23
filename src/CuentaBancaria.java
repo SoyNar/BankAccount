@@ -28,19 +28,19 @@ public abstract class CuentaBancaria {
 
     }
 
-    protected String getNumeroCuenta() {
+    public String getNumeroCuenta() {
         return numeroCuenta;
     }
 
-    protected String getTitular() {
+    public String getTitular() {
         return titular;
     }
 
-    protected double getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
 
-    protected double getTasaInteres() {
+    public double getTasaInteres() {
         return tasaInteres;
     }
 
