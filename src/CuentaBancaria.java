@@ -67,9 +67,15 @@ public abstract class CuentaBancaria {
         double interes = saldo * tasaInteres / 100;
         saldo += interes;
 
-        System.out.printf("Intereses generados: " + interes);
+        System.out.print("Intereses generados: " + interes);
 
         System.out.print("Nuevo saldo: " + saldo);
+    }
+
+    protected void descontarSaldo(double monto) {
+        if(monto > 0) {
+            this.saldo -= monto;
+        }
     }
 
 
