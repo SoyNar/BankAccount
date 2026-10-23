@@ -56,7 +56,7 @@ public abstract class CuentaBancaria {
 
         System.out.println("Deposito realizado: " + monto);
 
-        System.out.print("Nuevo saldo: " + saldo);
+        System.out.println("Nuevo saldo: " + saldo);
     }
 
 
@@ -87,9 +87,9 @@ public abstract class CuentaBancaria {
 
         System.out.println( "Titular: " + titular);
 
-        System.out.print( "Saldo: " + saldo);
+        System.out.println( "Saldo: " + saldo);
 
-        System.out.print( "Tasa de interes: " + tasaInteres);
+        System.out.println( "Tasa de interes: " + tasaInteres);
     }
 
 
