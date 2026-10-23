@@ -28,19 +28,19 @@ public abstract class CuentaBancaria {
 
     }
 
-    public String getNumeroCuenta() {
+    protected String getNumeroCuenta() {
         return numeroCuenta;
     }
 
-    public String getTitular() {
+    protected String getTitular() {
         return titular;
     }
 
-    public double getSaldo() {
+    protected double getSaldo() {
         return saldo;
     }
 
-    public double getTasaInteres() {
+    protected double getTasaInteres() {
         return tasaInteres;
     }
 
@@ -67,9 +67,15 @@ public abstract class CuentaBancaria {
         double interes = saldo * tasaInteres / 100;
         saldo += interes;
 
-        System.out.printf("Intereses generados: " + interes);
+        System.out.print("Intereses generados: " + interes);
 
         System.out.print("Nuevo saldo: " + saldo);
+    }
+
+    protected void descontarSaldo(double monto) {
+        if(monto > 0) {
+            this.saldo -= monto;
+        }
     }
 
 
