@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class TestBanco {
     public static void main(String[] args) {
         //1.creacion de cuentas
@@ -48,6 +51,38 @@ public class TestBanco {
         cuentaMaria.mostrarInfo();
 
         //6. calcular y mostrar resumen
+
+        System.out.println("\n~~~~~~~~~RESUMEN DE LA CUENTA BANCARIA ~~~~~~~~~~");
+
+        List<CuentaBancaria> cuentas = new ArrayList<>();
+        cuentas.add(cuentaAna);
+        cuentas.add(cuentaLuis);
+        cuentas.add(cuentaMaria);
+
+        double saldoTotal = 0;
+        CuentaBancaria cuentaMayor = cuentas.get(0);
+
+        for (CuentaBancaria cuenta : cuentas) {
+            saldoTotal += cuenta.getSaldo();
+
+            if (cuenta.getSaldo() > cuentaMayor.getSaldo()) {
+                cuentaMayor = cuenta;
+            }
+        }
+
+        int totalCuentas = cuentas.size();
+        double promedio = saldoTotal / totalCuentas;
+
+        System.out.println("Total de cuentas: " + totalCuentas);
+        System.out.println("Saldo total: " + saldoTotal);
+        System.out.println(String.format("Promedio de saldo: $%.2f%n ", promedio));
+
+        System.out.println("\nCuenta con mayor saldo:");
+        System.out.println("Número de cuenta: " + cuentaMayor.getNumeroCuenta());
+        System.out.println("Titular: " + cuentaMayor.getTitular());
+        System.out.println("Saldo: " + cuentaMayor.getSaldo());
+
+
 
 
 
