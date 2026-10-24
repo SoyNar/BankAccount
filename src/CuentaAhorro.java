@@ -2,7 +2,7 @@
 public class CuentaAhorro extends CuentaBancaria{
 
     private String fechaApertura;
-    private  static final double TASA_INTERES = 2.5;
+    private static final double TASA_INTERES = 2.5;
     private static final double SALDO_MINIMO_CUENTA = 10000;
 
     public CuentaAhorro(String numeroCuenta, String titular,double saldoInicial, String fechaApertura) {

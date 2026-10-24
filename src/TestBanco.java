@@ -9,8 +9,8 @@ public class TestBanco {
         CuentaAhorro cuentaAna = new CuentaAhorro("AH001", "Ana Pérez", 50000.0, "2024-01-15");
         //crear cuenta Luis
         CuentaCorriente cuentaLuis = new CuentaCorriente("CC001", "Luis", 20000.0);
-        //Crear cuenta Empresarial algo asii
-        //CuentaEmpresarial cuentaTech = new CuentaEmpresarial("EM001",200000, "nombreEmpresa", "rut");
+        //Cuenta Empresarial
+        CuentaEmpresarial cuentaTechSolutions = new CuentaEmpresarial("EM001","Tech Solutions", 200000, "Tech Solutions", "123456789-0");
         //cuenta Maria Lopez
         CuentaAhorro cuentaMaria = new CuentaAhorro("AH002,", "Maria Lopez", 15000.0, "2024-02-01");
 
@@ -18,7 +18,7 @@ public class TestBanco {
         System.out.println("Informacion todas las cuentas");
         cuentaAna.mostrarInfo();
         cuentaLuis.mostrarInfo();
-        //cuentaTech.mostrarInfo();
+        cuentaTechSolutions.mostrarInfo();
         cuentaMaria.mostrarInfo();
 
         //3. operaciones de cuentas
@@ -27,8 +27,8 @@ public class TestBanco {
         cuentaAna.depositar(10000);
         System.out.println("Retiro de luis");
         cuentaLuis.retirar(25000);
-        System.out.println("Retiro de Tech");
-        //cuentaTech.retirar(10000);
+        System.out.println("Retiro de Tech Solutions");
+        cuentaTechSolutions.retirar(10000);
         System.out.println("Retiro de Maria");
         cuentaMaria.retirar(20000);
 
@@ -38,8 +38,8 @@ public class TestBanco {
         cuentaAna.aplicarInteres();
         System.out.println("aplicando intereses cuenta Luis");
         cuentaLuis.aplicarInteres();
-        System.out.println("aplicando intereses cuenta Tech");
-        //cuentaTech.aplicarInteres();
+        System.out.println("aplicando intereses cuenta Tech Solutions");
+        cuentaTechSolutions.aplicarInteres();
         System.out.println("aplicando intereses cuenta Maria");
         cuentaMaria.aplicarInteres();
 
@@ -47,7 +47,7 @@ public class TestBanco {
         System.out.println("Mostrar info despues de moviminetos bancarios");
         cuentaAna.mostrarInfo();
         cuentaLuis.mostrarInfo();
-        //cuentaTech.mostrarnfo();
+        cuentaTechSolutions.mostrarInfo();
         cuentaMaria.mostrarInfo();
 
         //6. calcular y mostrar resumen
@@ -57,6 +57,7 @@ public class TestBanco {
         List<CuentaBancaria> cuentas = new ArrayList<>();
         cuentas.add(cuentaAna);
         cuentas.add(cuentaLuis);
+        cuentas.add(cuentaTechSolutions);
         cuentas.add(cuentaMaria);
 
         double saldoTotal = 0;
